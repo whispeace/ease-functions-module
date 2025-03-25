@@ -8,6 +8,19 @@ export * from './interpolator';
 export * from './animation';
 export * from './visualizer';
 
+// Экспортируем контекстуальные функции
+export * from './contextual/types';
+export * from './contextual/functions';
+
+// Экспортируем метафункции
+export * from './meta/types';
+export * from './meta/profiles';
+export * from './meta/functions';
+
+// Экспортируем параметрические функции
+export * from './parametric/types';
+export * from './parametric/generators';
+
 // Создаем и экспортируем готовые к использованию экземпляры
 import { DefaultEasingCombinator } from './combinator';
 import { 

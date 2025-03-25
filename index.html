@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Визуализация функций сглаживания</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Визуализация функций сглаживания</h1>
+      <p class="header-subtitle">Интерактивная демонстрация для анимации и движения</p>
+    </header>
+    
+    <main>
+      <section class="visualizer-section">
+        <div class="visualizer-controls" id="easing-controls">
+          <!-- Сюда будут добавлены элементы управления -->
+        </div>
+        
+        <div class="canvas-container">
+          <canvas id="easing-canvas"></canvas>
+        </div>
+      </section>
+      
+      <section class="demo-section">
+        <h2>Примеры анимаций</h2>
+        
+        <!-- Демонстрация прыжка -->
+        <div class="demo-card">
+          <h3>Прыжок</h3>
+          <div class="demo-area">
+            <div class="character" id="character"></div>
+            <div class="ground"></div>
+          </div>
+          <div class="demo-controls">
+            <button id="jump-button" class="btn primary">Прыжок</button>
+            <div class="easing-info">
+              <span>Функция: </span>
+              <code>conditional(easeOutQuad, easeInQuad)</code>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Демонстрация движения -->
+        <div class="demo-card">
+          <h3>Движение</h3>
+          <div class="demo-area">
+            <div class="box" id="moving-box"></div>
+          </div>
+          <div class="demo-controls">
+            <button id="move-button" class="btn primary">Переместить</button>
+            <select id="movement-easing" class="select">
+              <option value="easeInOutQuad">easeInOutQuad</option>
+              <option value="easeOutElastic">easeOutElastic</option>
+              <option value="easeInOutBack">easeInOutBack</option>
+              <option value="easeOutBounce">easeOutBounce</option>
+              <option value="linear">linear</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Демонстрация затухания -->
+        <div class="demo-card">
+          <h3>Затухание</h3>
+          <div class="demo-area">
+            <div class="circle" id="fading-circle"></div>
+          </div>
+          <div class="demo-controls">
+            <button id="fade-button" class="btn primary">Затухание</button>
+            <div class="slider-container">
+              <label for="fade-duration">Длительность:</label>
+              <input type="range" id="fade-duration" min="500" max="3000" step="100" value="1000">
+              <span id="duration-value">1000ms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Создано с использованием универсального модуля функций сглаживания</p>
+    </footer>
+  </div>
+  
+  <script type="module" src="/src//main.ts"></script>
+</body>
+</html>
